@@ -1,0 +1,4 @@
+<manifest projecttype="ACCOUNTCUSTOMIZATION">
+  <projectname>GIT_NETSUITE</projectname>
+  <frameworkversion>1.0</frameworkversion>
+</manifest>
