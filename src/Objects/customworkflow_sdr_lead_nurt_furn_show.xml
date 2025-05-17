@@ -1,0 +1,281 @@
+<workflow scriptid="customworkflow_sdr_lead_nurt_furn_show">
+  <description>The workflow invites new leads to a furniture show. A followup invitation is sent if the lead has not clicked on the first invitation after a period of time. This workflow executes for all new leads, but it could easily be modified (Condition section) to begin based on specific information entered for the lead (either from within NetSuite or via an online lead form).</description>
+  <initcontexts></initcontexts>
+  <initeventtypes></initeventtypes>
+  <initlocalizationcontext></initlocalizationcontext>
+  <initoncreate>T</initoncreate>
+  <initonvieworupdate>F</initonvieworupdate>
+  <initsavedsearchcondition></initsavedsearchcondition>
+  <inittriggertype>AFTERSUBMIT</inittriggertype>
+  <isinactive>F</isinactive>
+  <islogenabled>F</islogenabled>
+  <keephistory>ALWAYS</keephistory>
+  <name>Lead Nurturing Furniture Show</name>
+  <recordtypes>LEAD</recordtypes>
+  <releasestatus>NOTINITIATING</releasestatus>
+  <runasadmin>F</runasadmin>
+  <initcondition>
+    <formula></formula>
+    <type>VISUAL_BUILDER</type>
+  </initcondition>
+  <workflowstates>
+    <workflowstate scriptid="workflowstate42">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>State 1: Furniture Show Invite</name>
+      <positionx>203</positionx>
+      <positiony>53</positiony>
+      <workflowactions triggertype="ONENTRY">
+        <sendcampaignemailaction scriptid="workflowaction109">
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <recipientfield></recipientfield>
+          <recipientiscurrentrecord>T</recipientiscurrentrecord>
+          <recipientjoinfield></recipientjoinfield>
+          <resultfield>[scriptid=customworkflow_sdr_lead_nurt_furn_show.workflowstate42.custwfstate_sdr_invite_response]</resultfield>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </sendcampaignemailaction>
+        <subscribetorecordaction scriptid="workflowaction108">
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <recordfield>[scriptid=customworkflow_sdr_lead_nurt_furn_show.workflowstate42.custwfstate_sdr_invite_response]</recordfield>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </subscribetorecordaction>
+      </workflowactions>
+      <workflowstatecustomfields>
+        <workflowstatecustomfield scriptid="custwfstate_sdr_invite_response">
+          <applyformatting>F</applyformatting>
+          <defaultchecked>F</defaultchecked>
+          <defaultselection></defaultselection>
+          <defaultvalue></defaultvalue>
+          <description></description>
+          <displaytype>NORMAL</displaytype>
+          <dynamicdefault></dynamicdefault>
+          <fieldtype>SELECT</fieldtype>
+          <help></help>
+          <label>Invite Response</label>
+          <linktext></linktext>
+          <maxvalue></maxvalue>
+          <minvalue></minvalue>
+          <selectrecordtype>-130</selectrecordtype>
+          <storevalue>T</storevalue>
+        </workflowstatecustomfield>
+      </workflowstatecustomfields>
+      <workflowtransitions>
+        <workflowtransition scriptid="workflowtransition111">
+          <buttonaction></buttonaction>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <scheduledelay></scheduledelay>
+          <scheduletimeunit></scheduletimeunit>
+          <tostate>[scriptid=customworkflow_sdr_lead_nurt_furn_show.workflowstate40]</tostate>
+          <triggertype></triggertype>
+          <waitforworkflow></waitforworkflow>
+          <waitforworkflowstate></waitforworkflowstate>
+          <initcondition>
+            <formula><![CDATA["State:Invite Response:Response" IN ("Campaign Response Type1")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>State:Invite Response:Response</name>
+                <value>[scriptid=customworkflow_sdr_lead_nurt_furn_show.workflowstate42.custwfstate_sdr_invite_response]:STDRECORDCAMPAIGNRESPONSERESPONSETYPE</value>
+              </parameter>
+              <parameter>
+                <name>Campaign Response Type1</name>
+                <selectrecordtype>-131</selectrecordtype>
+                <value>6</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </workflowtransition>
+        <workflowtransition scriptid="workflowtransition110">
+          <buttonaction></buttonaction>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <scheduledelay>2</scheduledelay>
+          <scheduletimeunit>DAY</scheduletimeunit>
+          <tostate>[scriptid=customworkflow_sdr_lead_nurt_furn_show.workflowstate41]</tostate>
+          <triggertype>SCHEDULED</triggertype>
+          <waitforworkflow></waitforworkflow>
+          <waitforworkflowstate></waitforworkflowstate>
+          <initcondition>
+            <formula><![CDATA["State:Invite Response:Response" IN ("Campaign Response Type1","Campaign Response Type2")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>State:Invite Response:Response</name>
+                <value>[scriptid=customworkflow_sdr_lead_nurt_furn_show.workflowstate42.custwfstate_sdr_invite_response]:STDRECORDCAMPAIGNRESPONSERESPONSETYPE</value>
+              </parameter>
+              <parameter>
+                <name>Campaign Response Type1</name>
+                <selectrecordtype>-131</selectrecordtype>
+                <value>5</value>
+              </parameter>
+              <parameter>
+                <name>Campaign Response Type2</name>
+                <selectrecordtype>-131</selectrecordtype>
+                <value>12</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </workflowtransition>
+      </workflowtransitions>
+    </workflowstate>
+    <workflowstate scriptid="workflowstate41">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>State 2: Furniture Show Invite Reminder</name>
+      <positionx>203</positionx>
+      <positiony>143</positiony>
+      <workflowactions triggertype="ONENTRY">
+        <sendcampaignemailaction scriptid="workflowaction105">
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <recipientfield></recipientfield>
+          <recipientiscurrentrecord>T</recipientiscurrentrecord>
+          <recipientjoinfield></recipientjoinfield>
+          <resultfield>[scriptid=customworkflow_sdr_lead_nurt_furn_show.workflowstate41.custwfstate_sdr_reminder_response]</resultfield>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </sendcampaignemailaction>
+        <subscribetorecordaction scriptid="workflowaction106">
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <recordfield>[scriptid=customworkflow_sdr_lead_nurt_furn_show.workflowstate41.custwfstate_sdr_reminder_response]</recordfield>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </subscribetorecordaction>
+      </workflowactions>
+      <workflowstatecustomfields>
+        <workflowstatecustomfield scriptid="custwfstate_sdr_reminder_response">
+          <applyformatting>F</applyformatting>
+          <defaultchecked>F</defaultchecked>
+          <defaultselection></defaultselection>
+          <defaultvalue></defaultvalue>
+          <description></description>
+          <displaytype>NORMAL</displaytype>
+          <dynamicdefault></dynamicdefault>
+          <fieldtype>SELECT</fieldtype>
+          <help></help>
+          <label>Reminder Response</label>
+          <linktext></linktext>
+          <maxvalue></maxvalue>
+          <minvalue></minvalue>
+          <selectrecordtype>-130</selectrecordtype>
+          <storevalue>T</storevalue>
+        </workflowstatecustomfield>
+      </workflowstatecustomfields>
+      <workflowtransitions>
+        <workflowtransition scriptid="workflowtransition107">
+          <buttonaction></buttonaction>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <scheduledelay></scheduledelay>
+          <scheduletimeunit></scheduletimeunit>
+          <tostate>[scriptid=customworkflow_sdr_lead_nurt_furn_show.workflowstate40]</tostate>
+          <triggertype></triggertype>
+          <waitforworkflow></waitforworkflow>
+          <waitforworkflowstate></waitforworkflowstate>
+          <initcondition>
+            <formula><![CDATA["State:Reminder Response:Response" IN ("Campaign Response Type1")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>State:Reminder Response:Response</name>
+                <value>[scriptid=customworkflow_sdr_lead_nurt_furn_show.workflowstate41.custwfstate_sdr_reminder_response]:STDRECORDCAMPAIGNRESPONSERESPONSETYPE</value>
+              </parameter>
+              <parameter>
+                <name>Campaign Response Type1</name>
+                <selectrecordtype>-131</selectrecordtype>
+                <value>6</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </workflowtransition>
+      </workflowtransitions>
+    </workflowstate>
+    <workflowstate scriptid="workflowstate40">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>State 3: Thanks for Registering!</name>
+      <positionx>203</positionx>
+      <positiony>233</positiony>
+      <workflowactions triggertype="ONENTRY">
+        <sendemailaction scriptid="workflowaction104">
+          <attachmentfield></attachmentfield>
+          <attachmentfile></attachmentfile>
+          <attachmentjoinfield></attachmentjoinfield>
+          <attachmenttype>SPECIFIC</attachmenttype>
+          <body>Thanks for registering to attend the SuiteDreams furniture show!</body>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <includerecordlink>F</includerecordlink>
+          <isinactive>F</isinactive>
+          <recipientbccemail></recipientbccemail>
+          <recipientccemail></recipientccemail>
+          <recipientemail></recipientemail>
+          <recipientfield></recipientfield>
+          <recipientjoinfield></recipientjoinfield>
+          <recipienttype>CURRENTRECORD</recipienttype>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <senderfield>STDUSERUSER</senderfield>
+          <senderjoinfield></senderjoinfield>
+          <sendertype>FIELD</sendertype>
+          <subject>registration confirmation</subject>
+          <template></template>
+          <usetemplate>F</usetemplate>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </sendemailaction>
+      </workflowactions>
+    </workflowstate>
+  </workflowstates>
+</workflow>

@@ -1,0 +1,29 @@
+<customlist scriptid="customlist9">
+  <description></description>
+  <isinactive>F</isinactive>
+  <ismatrixoption>F</ismatrixoption>
+  <isordered>F</isordered>
+  <name>Company Size</name>
+  <customvalues>
+    <customvalue scriptid="value_1_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>1 - 99 Employees</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>100 - 499 Employees</value>
+    </customvalue>
+    <customvalue scriptid="value_3_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>500 - 999 Employees</value>
+    </customvalue>
+    <customvalue scriptid="value_4_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>Greater than 1,000</value>
+    </customvalue>
+  </customvalues>
+</customlist>

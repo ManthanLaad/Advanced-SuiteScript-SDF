@@ -1,0 +1,12 @@
+<emailtemplate scriptid="custemailtmpl_9_t1613115_502">
+  <addcompanyaddress>T</addcompanyaddress>
+  <addunsubscribelink>T</addunsubscribelink>
+  <description></description>
+  <isinactive>F</isinactive>
+  <isprivate>F</isprivate>
+  <mediaitem></mediaitem>
+  <name>Collections Notice - Germany</name>
+  <recordtype></recordtype>
+  <subject>Vergangene Fällige Rechnung</subject>
+  <usesmedia>F</usesmedia>
+</emailtemplate>

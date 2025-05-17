@@ -1,0 +1,12 @@
+<emailtemplate scriptid="custemailtmpl_6_t1613115_502">
+  <addcompanyaddress>T</addcompanyaddress>
+  <addunsubscribelink>T</addunsubscribelink>
+  <description></description>
+  <isinactive>F</isinactive>
+  <isprivate>F</isprivate>
+  <mediaitem></mediaitem>
+  <name>Sales Email</name>
+  <recordtype></recordtype>
+  <subject>Thank you for your Interest!</subject>
+  <usesmedia>F</usesmedia>
+</emailtemplate>

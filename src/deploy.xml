@@ -1,14 +1,9 @@
 <deploy>
-    <configuration>
-        <path>~/AccountConfiguration/*</path>
-    </configuration>
     <files>
-        <path>~/FileCabinet/*</path>
+        <path>~/FileCabinet/SuiteScripts/ml_ue_hello_world.js</path>
     </files>
     <objects>
-        <path>~/Objects/*</path>
+        <path>~/Objects/customscript_ml_ue_hello_world.xml</path>
+        <path>~/Objects/customsearch_ml_ss_so_updt_today.xml</path>
     </objects>
-    <translationimports>
-        <path>~/Translations/*</path>
-    </translationimports>
 </deploy>

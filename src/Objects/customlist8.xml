@@ -1,0 +1,64 @@
+<customlist scriptid="customlist8">
+  <description></description>
+  <isinactive>F</isinactive>
+  <ismatrixoption>F</ismatrixoption>
+  <isordered>T</isordered>
+  <name>Industry</name>
+  <customvalues>
+    <customvalue scriptid="value_1_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>Advertising/Media</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>Computer Hardware</value>
+    </customvalue>
+    <customvalue scriptid="value_3_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>Computer Software</value>
+    </customvalue>
+    <customvalue scriptid="value_4_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>Consumer Electronics</value>
+    </customvalue>
+    <customvalue scriptid="value_5_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>Financial Services</value>
+    </customvalue>
+    <customvalue scriptid="value_6_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>Consulting Services</value>
+    </customvalue>
+    <customvalue scriptid="value_7_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>Distribution/Wholesale</value>
+    </customvalue>
+    <customvalue scriptid="value_8_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>Retail</value>
+    </customvalue>
+    <customvalue scriptid="value_9_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>Design</value>
+    </customvalue>
+    <customvalue scriptid="value_10_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>Food &amp; Hospitality</value>
+    </customvalue>
+    <customvalue scriptid="value_11_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>Government</value>
+    </customvalue>
+  </customvalues>
+</customlist>

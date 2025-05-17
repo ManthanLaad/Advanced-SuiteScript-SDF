@@ -1,0 +1,12 @@
+<emailtemplate scriptid="custemailtmpl_4_t1613115_502">
+  <addcompanyaddress>T</addcompanyaddress>
+  <addunsubscribelink>T</addunsubscribelink>
+  <description>Thank you for looking at our products</description>
+  <isinactive>F</isinactive>
+  <isprivate>F</isprivate>
+  <mediaitem></mediaitem>
+  <name>Thank You Email Template</name>
+  <recordtype></recordtype>
+  <subject>Thank You</subject>
+  <usesmedia>F</usesmedia>
+</emailtemplate>

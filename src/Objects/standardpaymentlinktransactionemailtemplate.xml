@@ -1,0 +1,12 @@
+<emailtemplate scriptid="standardpaymentlinktransactionemailtemplate">
+  <addcompanyaddress>F</addcompanyaddress>
+  <addunsubscribelink>F</addunsubscribelink>
+  <description></description>
+  <isinactive>F</isinactive>
+  <isprivate>F</isprivate>
+  <mediaitem></mediaitem>
+  <name>Custom Payment Link Transaction Email Template</name>
+  <recordtype>TRANSACTION</recordtype>
+  <subject>&lt;#if transaction.subsidiary??&gt;${transaction.subsidiary.legalname}&lt;#else&gt;${companyinformation.legalname}&lt;/#if&gt; ${transaction@title} #${transaction.tranid}</subject>
+  <usesmedia>F</usesmedia>
+</emailtemplate>

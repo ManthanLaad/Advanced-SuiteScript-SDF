@@ -1,0 +1,19 @@
+<customlist scriptid="customlist_sdr_perf_review_type">
+  <description></description>
+  <isinactive>F</isinactive>
+  <ismatrixoption>F</ismatrixoption>
+  <isordered>T</isordered>
+  <name>Review Type</name>
+  <customvalues>
+    <customvalue scriptid="value_1_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>Salary Change</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>No Salary Change</value>
+    </customvalue>
+  </customvalues>
+</customlist>

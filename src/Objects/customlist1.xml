@@ -1,0 +1,169 @@
+<customlist scriptid="customlist1">
+  <description></description>
+  <isinactive>F</isinactive>
+  <ismatrixoption>F</ismatrixoption>
+  <isordered>T</isordered>
+  <name>Time Zones</name>
+  <customvalues>
+    <customvalue scriptid="value_1_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT-07:00) Pacific Time</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT-06:00) Mountain Time</value>
+    </customvalue>
+    <customvalue scriptid="value_3_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT-05:00) Central Time</value>
+    </customvalue>
+    <customvalue scriptid="value_4_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT-04:00) Eastern Time</value>
+    </customvalue>
+    <customvalue scriptid="value_5_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT+00:00) Greenwich Mean Time</value>
+    </customvalue>
+    <customvalue scriptid="value_6_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT+01:00) London, Dublin</value>
+    </customvalue>
+    <customvalue scriptid="value_7_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT+02:00) Paris, Madrid, Berlin, Rome, Amsterdam</value>
+    </customvalue>
+    <customvalue scriptid="value_8_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT+03:00) Athens, Helsinki, Cairo</value>
+    </customvalue>
+    <customvalue scriptid="value_9_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT+04:00) Abu Dhabi, Muscat</value>
+    </customvalue>
+    <customvalue scriptid="value_10_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT+04:00) Moscow, Baghdad, Nairobi, Kuwait</value>
+    </customvalue>
+    <customvalue scriptid="value_11_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT+04:30) Tehran</value>
+    </customvalue>
+    <customvalue scriptid="value_12_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT+05:00) Islamabad, Karachi</value>
+    </customvalue>
+    <customvalue scriptid="value_13_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT+05:30) New Delhi, Chennai, Kolkata</value>
+    </customvalue>
+    <customvalue scriptid="value_14_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT+06:00) Almaty, Dhaka, Astana</value>
+    </customvalue>
+    <customvalue scriptid="value_15_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT+07:00) Bangkok, Hanoi, Jakarta</value>
+    </customvalue>
+    <customvalue scriptid="value_16_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT+08:00) Perth, Beijing, Hong Kong, Kuala Lumpur, Singapore</value>
+    </customvalue>
+    <customvalue scriptid="value_17_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT+09:00) Tokyo, Osaka, Sapporo, Seoul</value>
+    </customvalue>
+    <customvalue scriptid="value_18_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT+09:30) Adelaide, Darwin</value>
+    </customvalue>
+    <customvalue scriptid="value_19_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT+10:00) Sydney, Melbourne, Canberra, Brisbane</value>
+    </customvalue>
+    <customvalue scriptid="value_20_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT+11:00) Solomon Islands, New Caledonia</value>
+    </customvalue>
+    <customvalue scriptid="value_21_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT+12:00) Auckland, Wellington</value>
+    </customvalue>
+    <customvalue scriptid="value_22_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT+12:00) Kwajalein, Fiji</value>
+    </customvalue>
+    <customvalue scriptid="value_23_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT-01:00) Azores</value>
+    </customvalue>
+    <customvalue scriptid="value_24_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT-02:30) Newfoundland</value>
+    </customvalue>
+    <customvalue scriptid="value_25_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT-03:00) Atlantic Time</value>
+    </customvalue>
+    <customvalue scriptid="value_26_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT-03:00) Brasilia, Buenos Aires</value>
+    </customvalue>
+    <customvalue scriptid="value_27_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT-05:00) Indiana (East)</value>
+    </customvalue>
+    <customvalue scriptid="value_28_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT-07:00) Arizona</value>
+    </customvalue>
+    <customvalue scriptid="value_29_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT-08:00) Alaska</value>
+    </customvalue>
+    <customvalue scriptid="value_30_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT-10:00) Hawaii</value>
+    </customvalue>
+    <customvalue scriptid="value_31_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT-11:00) Midway Island, Samoa</value>
+    </customvalue>
+    <customvalue scriptid="value_32_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>(GMT-12:00) International Date Line West</value>
+    </customvalue>
+  </customvalues>
+</customlist>

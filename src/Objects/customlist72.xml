@@ -1,0 +1,24 @@
+<customlist scriptid="customlist72">
+  <description></description>
+  <isinactive>F</isinactive>
+  <ismatrixoption>T</ismatrixoption>
+  <isordered>T</isordered>
+  <name>Bed Sizes</name>
+  <customvalues>
+    <customvalue scriptid="value_1_t1442449_853">
+      <abbreviation>F</abbreviation>
+      <isinactive>F</isinactive>
+      <value>Full</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1442449_853">
+      <abbreviation>Q</abbreviation>
+      <isinactive>F</isinactive>
+      <value>Queen</value>
+    </customvalue>
+    <customvalue scriptid="value_3_t1442449_853">
+      <abbreviation>K</abbreviation>
+      <isinactive>F</isinactive>
+      <value>King</value>
+    </customvalue>
+  </customvalues>
+</customlist>

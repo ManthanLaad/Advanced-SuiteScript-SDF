@@ -1,0 +1,34 @@
+<customlist scriptid="customlist89">
+  <description></description>
+  <isinactive>F</isinactive>
+  <ismatrixoption>T</ismatrixoption>
+  <isordered>T</isordered>
+  <name>White Shag Rug Sizes</name>
+  <customvalues>
+    <customvalue scriptid="value_1_t1442449_853">
+      <abbreviation>6x4</abbreviation>
+      <isinactive>F</isinactive>
+      <value>6&apos;x4&apos;</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1442449_853">
+      <abbreviation>5x5</abbreviation>
+      <isinactive>F</isinactive>
+      <value>5&apos;x5&apos;</value>
+    </customvalue>
+    <customvalue scriptid="value_3_t1442449_853">
+      <abbreviation>8x4</abbreviation>
+      <isinactive>F</isinactive>
+      <value>8&apos;x4&apos;</value>
+    </customvalue>
+    <customvalue scriptid="value_4_t1442449_853">
+      <abbreviation>10x5</abbreviation>
+      <isinactive>F</isinactive>
+      <value>10&apos;x5&apos;</value>
+    </customvalue>
+    <customvalue scriptid="value_5_t1442449_853">
+      <abbreviation>12x6</abbreviation>
+      <isinactive>F</isinactive>
+      <value>12&apos;x6&apos;</value>
+    </customvalue>
+  </customvalues>
+</customlist>

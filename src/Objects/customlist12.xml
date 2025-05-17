@@ -1,0 +1,34 @@
+<customlist scriptid="customlist12">
+  <description></description>
+  <isinactive>F</isinactive>
+  <ismatrixoption>F</ismatrixoption>
+  <isordered>F</isordered>
+  <name>Buying Time Frame</name>
+  <customvalues>
+    <customvalue scriptid="value_1_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>0 - 1 Month</value>
+    </customvalue>
+    <customvalue scriptid="value_5_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>12 + Months</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>2 - 6 Months</value>
+    </customvalue>
+    <customvalue scriptid="value_3_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>6 - 9 Months</value>
+    </customvalue>
+    <customvalue scriptid="value_4_t1442449_853">
+      <abbreviation></abbreviation>
+      <isinactive>F</isinactive>
+      <value>9 - 12 Months</value>
+    </customvalue>
+  </customvalues>
+</customlist>

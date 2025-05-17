@@ -1,0 +1,73 @@
+<savedcsvimport scriptid="custimport_11_t1613115_434">
+  <charencoding>Cp1252</charencoding>
+  <columndelimiter>COMMA</columndelimiter>
+  <datahandling>ADD</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
+  <description>Product catalog import from Sage Line 50</description>
+  <ignorereadonly>F</ignorereadonly>
+  <importname>Sage Line 50 - Products</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <recordtype>INVENTORYITEM</recordtype>
+  <runserversuitescript>F</runserversuitescript>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>F</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>INVENTORYITEM</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>INVENTORYITEM</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>ITEMID</field>
+          <columnreference>
+            <column>Product Code</column>
+            <file>INVENTORYITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>PRICINGGROUP</field>
+          <columnreference>
+            <column>Sales Price</column>
+            <file>INVENTORYITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>STOCKUNIT</field>
+          <columnreference>
+            <column>Quantity In Stock</column>
+            <file>INVENTORYITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>STOREDETAILEDDESCRIPTION</field>
+          <columnreference>
+            <column>Description</column>
+            <file>INVENTORYITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>TAXSCHEDULE</field>
+          <value>1</value>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

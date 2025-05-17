@@ -1,0 +1,84 @@
+<savedcsvimport scriptid="custimport_51_t1613115_434">
+  <charencoding>windows-1252</charencoding>
+  <columndelimiter>COMMA</columndelimiter>
+  <datahandling>UPDATE</datahandling>
+  <decimaldelimiter>PERIOD</decimaldelimiter>
+  <ignorereadonly>T</ignorereadonly>
+  <importname>Service Items GL Account Update</importname>
+  <logsystemnotescustfields>F</logsystemnotescustfields>
+  <multiselectdelimiter>|</multiselectdelimiter>
+  <overwritemissingfields>F</overwritemissingfields>
+  <overwritesublists>F</overwritesublists>
+  <recordtype>SERVICESALEITEM</recordtype>
+  <runserversuitescript>F</runserversuitescript>
+  <usemultithread>F</usemultithread>
+  <validatemandatorycustfields>T</validatemandatorycustfields>
+  <audience>
+    <allemployees>F</allemployees>
+    <allpartners>F</allpartners>
+    <allroles>F</allroles>
+    <globaledit>F</globaledit>
+    <ispublic>F</ispublic>
+    <roles></roles>
+  </audience>
+  <filemappings>
+    <filemapping>
+      <file>SERVICESALEITEM</file>
+    </filemapping>
+  </filemappings>
+  <recordmappings>
+    <recordmapping>
+      <record>SERVICESALEITEM</record>
+      <fieldmappings>
+        <fieldmapping>
+          <field>CREATEJOB</field>
+          <columnreference>
+            <column>Create Project</column>
+            <file>SERVICESALEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DEFERREDREVENUEACCOUNT</field>
+          <columnreference>
+            <column>Deferred Revenue Account</column>
+            <file>SERVICESALEITEM</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>DEPARTMENT</field>
+          <columnreference>
+            <column>Department</column>
+            <file>SERVICESALEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>ID</field>
+          <columnreference>
+            <column>Internal ID</column>
+            <file>SERVICESALEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>INCOMEACCOUNT</field>
+          <columnreference>
+            <column>Income Account</column>
+            <file>SERVICESALEITEM</file>
+            <type>INTERNAL_ID</type>
+          </columnreference>
+        </fieldmapping>
+        <fieldmapping>
+          <field>REVRECSCHEDULE</field>
+          <columnreference>
+            <column>Rev. Rec. Schedule</column>
+            <file>SERVICESALEITEM</file>
+            <type>NAME</type>
+          </columnreference>
+        </fieldmapping>
+      </fieldmappings>
+    </recordmapping>
+  </recordmappings>
+</savedcsvimport>

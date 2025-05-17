@@ -1,0 +1,39 @@
+<html>
+    <head>
+         <style type="text/css">
+            html {width:400px; height:100%; }
+            p, a {font-size:14px !important; font-family:sans-serif !important; }
+         </style>
+    </head>
+    <body>
+         <p>Dear <#if !transaction.entity.isperson>${transaction.entity.companyname}<#else><#if transaction.entity.salutation?has_content>${transaction.entity.salutation} </#if><#if transaction.entity.firstname?has_content>${transaction.entity.firstname} </#if><#if transaction.entity.lastname?has_content>${transaction.entity.lastname}</#if></#if>,
+         <br />
+         <br />
+         Thank you for placing your order with <#if preferences.subsidiaries>${transaction.subsidiary.legalname?has_content?then(transaction.subsidiary.legalname, transaction.subsidiary.namenohierarchy)}<#else>${companyinformation.legalname?has_content?then(companyinformation.legalname, companyinformation.companyname)}</#if>.<br />
+         <br />
+         Please find attached ${transaction@title} #${transaction.tranId} with all details.<br />
+         We appreciate your business and your trust.<br />
+         <br /></p>
+         <#if transaction.paymentlink?has_content>
+            <div id="center" style="text-align:center; margin:0px 0px 0px 50px; width:400px; ">
+                <div><a href="${transaction.paymentlink}" ><img alt="Pay Now" src="http://content.netsuite.com/images/paynow.png" style="width:105px; height:40px; background:transparent; " /></a></div>
+                or<br />
+                <a href="${transaction.paymentlink}">copy payment link to the clipboard</a>
+            </div>
+         </#if>
+         <br />
+         <br />
+         <p>Kind Regards,<br />
+         <br />
+            <b><#if preferences.subsidiaries>${transaction.subsidiary.legalname?has_content?then(transaction.subsidiary.legalname, transaction.subsidiary.namenohierarchy)}<#else>${companyinformation.legalname?has_content?then(companyinformation.legalname, companyinformation.companyname)}</#if></b><br />
+            <#if companyinformation.addresstext?has_content>${companyinformation.addresstext}<br />
+            <#else>
+                <#if transaction.subsidiary.address1?has_content>${transaction.subsidiary.address1}<br /></#if>
+                <#if transaction.subsidiary.address2?has_content>${transaction.subsidiary.address2}<br /></#if>
+                <#if transaction.subsidiary.city?has_content>${transaction.subsidiary.city}, </#if><#if transaction.subsidiary.state?has_content>${transaction.subsidiary.state}</#if> <#if transaction.subsidiary.zip?has_content>${transaction.subsidiary.zip}</#if><br />
+                <#if transaction.subsidiary.country?has_content>${transaction.subsidiary.country}<br /></#if>
+            </#if>
+         Email: <#if transaction.subsidiary??>${transaction.subsidiary.email}<#else>${companyinformation.email}</#if><br />
+         Phone: <#if transaction.subsidiary??>${transaction.subsidiary.phone}<#else>${companyinformation.phone}</#if><br /></p>
+     </body>
+</html>

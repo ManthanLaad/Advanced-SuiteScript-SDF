@@ -1,0 +1,19 @@
+<customlist scriptid="customlist_lead_nurture_cat">
+  <description></description>
+  <isinactive>F</isinactive>
+  <ismatrixoption>F</ismatrixoption>
+  <isordered>T</isordered>
+  <name>Category</name>
+  <customvalues>
+    <customvalue scriptid="value_1_t1442449_853">
+      <abbreviation>C</abbreviation>
+      <isinactive>F</isinactive>
+      <value>Corporation</value>
+    </customvalue>
+    <customvalue scriptid="value_2_t1442449_853">
+      <abbreviation>I</abbreviation>
+      <isinactive>F</isinactive>
+      <value>Individual Consumer</value>
+    </customvalue>
+  </customvalues>
+</customlist>

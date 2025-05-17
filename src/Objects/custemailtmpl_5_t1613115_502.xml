@@ -1,0 +1,12 @@
+<emailtemplate scriptid="custemailtmpl_5_t1613115_502">
+  <addcompanyaddress>T</addcompanyaddress>
+  <addunsubscribelink>T</addunsubscribelink>
+  <description>Customer follow up for next meeting</description>
+  <isinactive>F</isinactive>
+  <isprivate>F</isprivate>
+  <mediaitem></mediaitem>
+  <name>Follow Up</name>
+  <recordtype></recordtype>
+  <subject>Follow Up</subject>
+  <usesmedia>F</usesmedia>
+</emailtemplate>

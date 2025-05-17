@@ -1,0 +1,488 @@
+<workflow scriptid="customworkflow_b2b_lead_nurturing">
+  <description></description>
+  <initcontexts></initcontexts>
+  <initeventtypes></initeventtypes>
+  <initlocalizationcontext></initlocalizationcontext>
+  <initoncreate>T</initoncreate>
+  <initonvieworupdate>F</initonvieworupdate>
+  <initsavedsearchcondition></initsavedsearchcondition>
+  <inittriggertype>AFTERSUBMIT</inittriggertype>
+  <isinactive>F</isinactive>
+  <islogenabled>F</islogenabled>
+  <keephistory>ALWAYS</keephistory>
+  <name>B2B Lead Nurturing Workflow</name>
+  <recordtypes>LEAD</recordtypes>
+  <releasestatus>NOTINITIATING</releasestatus>
+  <runasadmin>F</runasadmin>
+  <initcondition>
+    <formula><![CDATA["Category" IN ("Category1")]]></formula>
+    <type>VISUAL_BUILDER</type>
+    <parameters>
+      <parameter>
+        <name>Category</name>
+        <value>[scriptid=custentity_lead_category]</value>
+      </parameter>
+      <parameter>
+        <name>Category1</name>
+        <selectrecordtype>[scriptid=customlist_lead_nurture_cat]</selectrecordtype>
+        <value>[scriptid=customlist_lead_nurture_cat.value_1_t1442449_853]</value>
+      </parameter>
+    </parameters>
+  </initcondition>
+  <workflowcustomfields>
+    <workflowcustomfield scriptid="custworkflow_res3">
+      <applyformatting>F</applyformatting>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displaytype>NORMAL</displaytype>
+      <dynamicdefault></dynamicdefault>
+      <fieldtype>SELECT</fieldtype>
+      <help></help>
+      <label>3rd Wave Response</label>
+      <linktext></linktext>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <selectrecordtype>-130</selectrecordtype>
+      <storevalue>T</storevalue>
+    </workflowcustomfield>
+    <workflowcustomfield scriptid="custworkflow_res1">
+      <applyformatting>F</applyformatting>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displaytype>NORMAL</displaytype>
+      <dynamicdefault></dynamicdefault>
+      <fieldtype>SELECT</fieldtype>
+      <help></help>
+      <label>First Wave Response</label>
+      <linktext></linktext>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <selectrecordtype>-130</selectrecordtype>
+      <storevalue>T</storevalue>
+    </workflowcustomfield>
+    <workflowcustomfield scriptid="custworkflow_res2">
+      <applyformatting>F</applyformatting>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displaytype>NORMAL</displaytype>
+      <dynamicdefault></dynamicdefault>
+      <fieldtype>SELECT</fieldtype>
+      <help></help>
+      <label>2nd Wave Response</label>
+      <linktext></linktext>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <selectrecordtype>-130</selectrecordtype>
+      <storevalue>T</storevalue>
+    </workflowcustomfield>
+    <workflowcustomfield scriptid="custworkflow_b2b_phone_call">
+      <applyformatting>F</applyformatting>
+      <defaultchecked>F</defaultchecked>
+      <defaultselection></defaultselection>
+      <defaultvalue></defaultvalue>
+      <description></description>
+      <displaytype>NORMAL</displaytype>
+      <dynamicdefault></dynamicdefault>
+      <fieldtype>SELECT</fieldtype>
+      <help></help>
+      <label>Phone Call</label>
+      <linktext></linktext>
+      <maxvalue></maxvalue>
+      <minvalue></minvalue>
+      <selectrecordtype>-22</selectrecordtype>
+      <storevalue>T</storevalue>
+    </workflowcustomfield>
+  </workflowcustomfields>
+  <workflowstates>
+    <workflowstate scriptid="workflowstate28">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>Webinar Invitation</name>
+      <positionx>203</positionx>
+      <positiony>53</positiony>
+      <workflowactions triggertype="ONENTRY">
+        <sendcampaignemailaction scriptid="workflowaction70">
+          <campaignevent>[ACCOUNT_SPECIFIC_VALUE]</campaignevent>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <recipientfield></recipientfield>
+          <recipientiscurrentrecord>T</recipientiscurrentrecord>
+          <recipientjoinfield></recipientjoinfield>
+          <resultfield>[scriptid=customworkflow_b2b_lead_nurturing.custworkflow_res1]</resultfield>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </sendcampaignemailaction>
+        <subscribetorecordaction scriptid="workflowaction71">
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <recordfield>[scriptid=customworkflow_b2b_lead_nurturing.custworkflow_res1]</recordfield>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </subscribetorecordaction>
+      </workflowactions>
+      <workflowtransitions>
+        <workflowtransition scriptid="workflowtransition72">
+          <buttonaction></buttonaction>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <scheduledelay></scheduledelay>
+          <scheduletimeunit></scheduletimeunit>
+          <tostate>[scriptid=customworkflow_b2b_lead_nurturing.workflowstate29]</tostate>
+          <triggertype></triggertype>
+          <waitforworkflow></waitforworkflow>
+          <waitforworkflowstate></waitforworkflowstate>
+          <initcondition>
+            <formula><![CDATA["Workflow:First Wave Response:Response" IN ("Campaign Response Type1")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Workflow:First Wave Response:Response</name>
+                <value>[scriptid=customworkflow_b2b_lead_nurturing.custworkflow_res1]:STDRECORDCAMPAIGNRESPONSERESPONSETYPE</value>
+              </parameter>
+              <parameter>
+                <name>Campaign Response Type1</name>
+                <selectrecordtype>-131</selectrecordtype>
+                <value>6</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </workflowtransition>
+        <workflowtransition scriptid="workflowtransition74">
+          <buttonaction></buttonaction>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <scheduledelay>14</scheduledelay>
+          <scheduletimeunit>DAY</scheduletimeunit>
+          <tostate>[scriptid=customworkflow_b2b_lead_nurturing.workflowstate30]</tostate>
+          <triggertype>SCHEDULED</triggertype>
+          <waitforworkflow></waitforworkflow>
+          <waitforworkflowstate></waitforworkflowstate>
+          <initcondition>
+            <formula><![CDATA["Workflow:First Wave Response:Response" IN ("Campaign Response Type1","Campaign Response Type2","Campaign Response Type3")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Workflow:First Wave Response:Response</name>
+                <value>[scriptid=customworkflow_b2b_lead_nurturing.custworkflow_res1]:STDRECORDCAMPAIGNRESPONSERESPONSETYPE</value>
+              </parameter>
+              <parameter>
+                <name>Campaign Response Type1</name>
+                <selectrecordtype>-131</selectrecordtype>
+                <value>4</value>
+              </parameter>
+              <parameter>
+                <name>Campaign Response Type2</name>
+                <selectrecordtype>-131</selectrecordtype>
+                <value>5</value>
+              </parameter>
+              <parameter>
+                <name>Campaign Response Type3</name>
+                <selectrecordtype>-131</selectrecordtype>
+                <value>12</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </workflowtransition>
+      </workflowtransitions>
+    </workflowstate>
+    <workflowstate scriptid="workflowstate30">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>New Customer Discount</name>
+      <positionx>203</positionx>
+      <positiony>143</positiony>
+      <workflowactions triggertype="ONENTRY">
+        <sendcampaignemailaction scriptid="workflowaction76">
+          <campaignevent>[ACCOUNT_SPECIFIC_VALUE]</campaignevent>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <recipientfield></recipientfield>
+          <recipientiscurrentrecord>T</recipientiscurrentrecord>
+          <recipientjoinfield></recipientjoinfield>
+          <resultfield>[scriptid=customworkflow_b2b_lead_nurturing.custworkflow_res2]</resultfield>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </sendcampaignemailaction>
+        <subscribetorecordaction scriptid="workflowaction77">
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <recordfield>[scriptid=customworkflow_b2b_lead_nurturing.custworkflow_res2]</recordfield>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </subscribetorecordaction>
+      </workflowactions>
+      <workflowtransitions>
+        <workflowtransition scriptid="workflowtransition78">
+          <buttonaction></buttonaction>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <scheduledelay>7</scheduledelay>
+          <scheduletimeunit>DAY</scheduletimeunit>
+          <tostate>[scriptid=customworkflow_b2b_lead_nurturing.workflowstate31]</tostate>
+          <triggertype>SCHEDULED</triggertype>
+          <waitforworkflow></waitforworkflow>
+          <waitforworkflowstate></waitforworkflowstate>
+          <initcondition>
+            <formula><![CDATA["Workflow:2nd Wave Response:Response" IN ("Campaign Response Type1","Campaign Response Type2","Campaign Response Type3")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Workflow:2nd Wave Response:Response</name>
+                <value>[scriptid=customworkflow_b2b_lead_nurturing.custworkflow_res2]:STDRECORDCAMPAIGNRESPONSERESPONSETYPE</value>
+              </parameter>
+              <parameter>
+                <name>Campaign Response Type1</name>
+                <selectrecordtype>-131</selectrecordtype>
+                <value>5</value>
+              </parameter>
+              <parameter>
+                <name>Campaign Response Type2</name>
+                <selectrecordtype>-131</selectrecordtype>
+                <value>12</value>
+              </parameter>
+              <parameter>
+                <name>Campaign Response Type3</name>
+                <selectrecordtype>-131</selectrecordtype>
+                <value>4</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </workflowtransition>
+        <workflowtransition scriptid="workflowtransition75">
+          <buttonaction></buttonaction>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <scheduledelay></scheduledelay>
+          <scheduletimeunit></scheduletimeunit>
+          <tostate>[scriptid=customworkflow_b2b_lead_nurturing.workflowstate29]</tostate>
+          <triggertype></triggertype>
+          <waitforworkflow></waitforworkflow>
+          <waitforworkflowstate></waitforworkflowstate>
+          <initcondition>
+            <formula><![CDATA["Workflow:2nd Wave Response:Response" IN ("Campaign Response Type1")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Workflow:2nd Wave Response:Response</name>
+                <value>[scriptid=customworkflow_b2b_lead_nurturing.custworkflow_res2]:STDRECORDCAMPAIGNRESPONSERESPONSETYPE</value>
+              </parameter>
+              <parameter>
+                <name>Campaign Response Type1</name>
+                <selectrecordtype>-131</selectrecordtype>
+                <value>6</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </workflowtransition>
+      </workflowtransitions>
+    </workflowstate>
+    <workflowstate scriptid="workflowstate31">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>Free In Office Consultation</name>
+      <positionx>203</positionx>
+      <positiony>233</positiony>
+      <workflowactions triggertype="ONENTRY">
+        <sendcampaignemailaction scriptid="workflowaction80">
+          <campaignevent>[ACCOUNT_SPECIFIC_VALUE]</campaignevent>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <recipientfield></recipientfield>
+          <recipientiscurrentrecord>T</recipientiscurrentrecord>
+          <recipientjoinfield></recipientjoinfield>
+          <resultfield>[scriptid=customworkflow_b2b_lead_nurturing.custworkflow_res3]</resultfield>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </sendcampaignemailaction>
+        <subscribetorecordaction scriptid="workflowaction81">
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <recordfield>[scriptid=customworkflow_b2b_lead_nurturing.custworkflow_res3]</recordfield>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+        </subscribetorecordaction>
+      </workflowactions>
+      <workflowtransitions>
+        <workflowtransition scriptid="workflowtransition79">
+          <buttonaction></buttonaction>
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <scheduledelay></scheduledelay>
+          <scheduletimeunit></scheduletimeunit>
+          <tostate>[scriptid=customworkflow_b2b_lead_nurturing.workflowstate29]</tostate>
+          <triggertype></triggertype>
+          <waitforworkflow></waitforworkflow>
+          <waitforworkflowstate></waitforworkflowstate>
+          <initcondition>
+            <formula><![CDATA["Workflow:3rd Wave Response:Response" IN ("Campaign Response Type1")]]></formula>
+            <type>VISUAL_BUILDER</type>
+            <parameters>
+              <parameter>
+                <name>Workflow:3rd Wave Response:Response</name>
+                <value>[scriptid=customworkflow_b2b_lead_nurturing.custworkflow_res3]:STDRECORDCAMPAIGNRESPONSERESPONSETYPE</value>
+              </parameter>
+              <parameter>
+                <name>Campaign Response Type1</name>
+                <selectrecordtype>-131</selectrecordtype>
+                <value>6</value>
+              </parameter>
+            </parameters>
+          </initcondition>
+        </workflowtransition>
+      </workflowtransitions>
+    </workflowstate>
+    <workflowstate scriptid="workflowstate29">
+      <description></description>
+      <donotexitworkflow>F</donotexitworkflow>
+      <name>Sales Call</name>
+      <positionx>203</positionx>
+      <positiony>323</positiony>
+      <workflowactions triggertype="ONENTRY">
+        <createrecordaction scriptid="workflowaction73">
+          <conditionsavedsearch></conditionsavedsearch>
+          <contexttypes></contexttypes>
+          <eventtypes></eventtypes>
+          <isinactive>F</isinactive>
+          <recordtype>PHONECALL</recordtype>
+          <resultfield>[scriptid=customworkflow_b2b_lead_nurturing.custworkflow_b2b_phone_call]</resultfield>
+          <scheduledelay></scheduledelay>
+          <schedulemode>DELAY</schedulemode>
+          <schedulerecurrence></schedulerecurrence>
+          <scheduletimeofday></scheduletimeofday>
+          <scheduletimeunit></scheduletimeunit>
+          <initcondition>
+            <formula></formula>
+            <type>VISUAL_BUILDER</type>
+          </initcondition>
+          <fieldsettings>
+            <fieldsetting>
+              <targetfield>STDEVENTASSIGNED</targetfield>
+              <valuechecked></valuechecked>
+              <valuedate></valuedate>
+              <valuefield>STDENTITYSALESREP</valuefield>
+              <valueformula></valueformula>
+              <valuejoinfield></valuejoinfield>
+              <valueselect></valueselect>
+              <valuetext></valuetext>
+            </fieldsetting>
+            <fieldsetting>
+              <targetfield>STDEVENTENDDATE</targetfield>
+              <valuechecked></valuechecked>
+              <valuedate>TOMORROW</valuedate>
+              <valuefield></valuefield>
+              <valueformula></valueformula>
+              <valuejoinfield></valuejoinfield>
+              <valueselect></valueselect>
+              <valuetext></valuetext>
+            </fieldsetting>
+            <fieldsetting>
+              <targetfield>STDEVENTCOMPANY</targetfield>
+              <valuechecked></valuechecked>
+              <valuedate></valuedate>
+              <valuefield></valuefield>
+              <valueformula></valueformula>
+              <valuejoinfield></valuejoinfield>
+              <valueselect>@CURRENT@</valueselect>
+              <valuetext></valuetext>
+            </fieldsetting>
+            <fieldsetting>
+              <targetfield>STDEVENTTITLE</targetfield>
+              <valuechecked></valuechecked>
+              <valuedate></valuedate>
+              <valuefield></valuefield>
+              <valueformula></valueformula>
+              <valuejoinfield></valuejoinfield>
+              <valueselect></valueselect>
+              <valuetext>New Lead Intro Call</valuetext>
+            </fieldsetting>
+            <fieldsetting>
+              <targetfield>STDEVENTSTARTDATE</targetfield>
+              <valuechecked></valuechecked>
+              <valuedate>TOMORROW</valuedate>
+              <valuefield></valuefield>
+              <valueformula></valueformula>
+              <valuejoinfield></valuejoinfield>
+              <valueselect></valueselect>
+              <valuetext></valuetext>
+            </fieldsetting>
+            <fieldsetting>
+              <targetfield>STDEVENTPHONE</targetfield>
+              <valuechecked></valuechecked>
+              <valuedate></valuedate>
+              <valuefield>STDENTITYPHONE</valuefield>
+              <valueformula></valueformula>
+              <valuejoinfield></valuejoinfield>
+              <valueselect></valueselect>
+              <valuetext></valuetext>
+            </fieldsetting>
+          </fieldsettings>
+        </createrecordaction>
+      </workflowactions>
+    </workflowstate>
+  </workflowstates>
+</workflow>
