@@ -9,7 +9,7 @@
   <scriptfile>[/SuiteScripts/ml_ue_hello_world.js]</scriptfile>
   <scriptdeployments>
     <scriptdeployment scriptid="customdeploy_ml_ue_hello_world_dp_so">
-      <allemployees>F</allemployees>
+      <allemployees>T</allemployees>
       <alllocalizationcontexts>T</alllocalizationcontexts>
       <allpartners>F</allpartners>
       <allroles>F</allroles>
@@ -20,7 +20,7 @@
       <loglevel>DEBUG</loglevel>
       <recordtype>SALESORDER</recordtype>
       <runasrole>ADMINISTRATOR</runasrole>
-      <status>TESTING</status>
+      <status>RELEASED</status>
     </scriptdeployment>
   </scriptdeployments>
 </usereventscript>
